@@ -44,6 +44,11 @@ char *fb_get_error(void);
 void fb_queue_flash(const char *ptn, unsigned sz);
 void fb_queue_verify(const char *ptn, unsigned sz);
 void fb_queue_erase(const char *ptn);
+/*added below line to avoid error buidling on macOS Sequoia
+[call to undeclared function 'fb_queue_check',ISO C99 and later do not support 
+implicit function declarations -Wimplicit-function-declaration]
+*/
+void fb_queue_check(const char *ptn);
 void fb_queue_require(const char *var, int invert, unsigned nvalues, const char **value);
 void fb_queue_display(const char *var, const char *prettyname);
 void fb_queue_set(const char *var, const char *value, const char *prettyname);
