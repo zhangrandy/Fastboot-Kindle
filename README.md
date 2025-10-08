@@ -1,8 +1,10 @@
-## added below line to avoid error buidling on macOS Sequoia
-
 ```c
-/* ...undeclared function 'fb_queue_check',ISO C99 and later do not support 
-implicit function declarations -Wimplicit-function-declaration... */
+/*
+added below line to avoid this error buidling on macOS Sequoia:
+...undeclared function 'fb_queue_check',ISO C99 and later do not support 
+implicit function declarations -Wimplicit-function-declaration...
+*/
+
 void fb_queue_check(const char *ptn);
 ```
 
