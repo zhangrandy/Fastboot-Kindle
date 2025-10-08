@@ -1,10 +1,8 @@
-```c
-/*
-added below line to avoid this error buidling on macOS Sequoia:
-...undeclared function 'fb_queue_check',ISO C99 and later do not support 
-implicit function declarations -Wimplicit-function-declaration...
-*/
+Added below line to `fastboot.h` to avoid this error buidling on macOS Sequoia:
 
+*`...undeclared function 'fb_queue_check',ISO C99 and later do not support implicit function declarations -Wimplicit-function-declaration...`*
+
+```c
 void fb_queue_check(const char *ptn);
 ```
 
